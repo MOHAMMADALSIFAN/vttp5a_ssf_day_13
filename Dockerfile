@@ -18,10 +18,10 @@ FROM openjdk:23-jdk-slim
 WORKDIR /
 
 # Copy the Maven build output (JAR file) into the container
-COPY --from=build /target/vtpp5a_ssf_day_13-0.0.1-SNAPSHOT day3lecture.jar
+COPY --from=build target\vtpp5a_ssf_day_13-0.0.1-SNAPSHOT.jar vtpp5a_ssf_day_13.jar
 
 # Expose the port your application runs on
 EXPOSE 8080
 
 # Command to run the application
-ENTRYPOINT ["java", "-jar", "day3lecture.jar"]
+ENTRYPOINT ["java", "-jar", "vtpp5a_ssf_day_13.jar"]
