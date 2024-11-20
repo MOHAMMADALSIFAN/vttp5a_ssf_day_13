@@ -40,6 +40,23 @@ public class PersonRepo {
     }
     return false;
   }
+  public Person findById(String id) {
+    return persons.stream()
+            .filter(person -> person.getId().equals(id))
+            .findFirst()
+            .orElse(null);
+
+
+}
+// public List<Person> findByName(String name) {
+//   List<Person> result = new ArrayList<>();
+//   for (Person person : persons) {
+//       if (person.getFirstName().equalsIgnoreCase(name)) {
+//           result.add(person);
+//       }
+//   }
+//   return result;
+// }
 
 
 }

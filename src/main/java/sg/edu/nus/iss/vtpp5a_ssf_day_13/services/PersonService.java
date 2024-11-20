@@ -1,5 +1,6 @@
 package sg.edu.nus.iss.vtpp5a_ssf_day_13.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,17 @@ public class PersonService {
   public boolean update(Person person){
     return personRepo.update(person);
   }
-
-
+  public Person findById(String id) {
+    return personRepo.findById(id);
 }
+
+  //   private List<Person> persons = new ArrayList<>(); // Simulated database
+
+  //   public List<Person> findByName(String name) {
+  //     return personRepo.findByName(name);
+  // }
+  
+}
+
+
+

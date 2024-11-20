@@ -39,6 +39,7 @@ public class Person {
   private Date dateOfBirth;
 
   public Person() {
+    this.id = UUID.randomUUID().toString();
   }
 
   public Person(String firstName, String lastName, Integer salary, String email, Date dateOfBirth){
