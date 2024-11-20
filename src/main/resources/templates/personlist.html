@@ -22,6 +22,8 @@
                 <th>Email</th>
                 <th>Salary</th>
                 <th>DOB</th>
+                <th>Phone Number</th>
+                <th>Postal Code</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -33,6 +35,8 @@
                 <td th:utext="${person.email}"></td>
                 <td th:utext="${person.salary}"></td>
                 <td th:utext="${#dates.format(person.dateOfBirth, 'dd/MM/yyyy')}"></td>
+                <td th:utext="${person.phoneNumber}"></td>
+                <td th:utext="${person.postalCode}"></td>
                 <td><a class="btn btn-danger" th:href="@{/persons/delete/{person-id}(person-id=${person.id})}">Delete</a></td>
                 <td><a class="btn btn-success" th:href="@{/persons/update/{person-id}(person-id=${person.id})}">Edit</a></td>
             </tr>
