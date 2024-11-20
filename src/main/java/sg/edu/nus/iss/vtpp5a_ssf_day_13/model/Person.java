@@ -26,7 +26,7 @@ public class Person {
   private String lastName;
 
   @Min(value = 1500, message = "Minimum salary starts from 1500")
-  @Max(value = 50000, message = "Maximum salary starts from 1500")
+  @Max(value = 50000, message = "Maximum salary starts from 50000")
   private Integer salary;
 
   @Email(message = "Email input doesn't not conform to email format")
@@ -34,7 +34,7 @@ public class Person {
   private String email;
 
   
-  @Past(message="birth date must be a past date")
+  @Past(message="Birth date must be in a past date")
   @DateTimeFormat(pattern="yyyy-MM-dd")
   private Date dateOfBirth;
 

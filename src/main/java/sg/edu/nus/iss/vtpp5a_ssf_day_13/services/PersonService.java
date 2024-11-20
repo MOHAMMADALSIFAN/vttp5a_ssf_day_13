@@ -27,8 +27,8 @@ public class PersonService {
   public boolean update(Person person){
     return personRepo.update(person);
   }
-  public Person findById(String id) {
-    return personRepo.findById(id);
+  public Person findById(String personId) {
+    return personRepo.findById(personId);
 }
 
   //   private List<Person> persons = new ArrayList<>(); // Simulated database

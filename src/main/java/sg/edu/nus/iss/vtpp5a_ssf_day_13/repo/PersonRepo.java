@@ -30,23 +30,12 @@ public class PersonRepo {
     return false;
   }
 
-  public Boolean update (Person person){
-   List<Person> filteredPerson = persons.stream().filter(p-> p.getId().equals(person.getId())).collect(Collectors.toList());
-
-    if(filteredPerson.size()> 0){
-      persons.remove(filteredPerson.getFirst());
-      persons.add(person);
-      return true;
-    }
-    return false;
-  }
-  public Person findById(String id) {
-    return persons.stream()
-            .filter(person -> person.getId().equals(id))
-            .findFirst()
-            .orElse(null);
 
 
+  public Person findById(String personId) {
+    Person foundPerson = persons.stream().filter(p -> p.getId().equals(personId)).findFirst().get();
+
+    return foundPerson;
 }
 // public List<Person> findByName(String name) {
 //   List<Person> result = new ArrayList<>();
@@ -57,6 +46,15 @@ public class PersonRepo {
 //   }
 //   return result;
 // }
+public Boolean update(Person person) {
+  List<Person> filteredPerson = persons.stream().filter(p -> p.getId().equals(person.getId())).collect(Collectors.toList());
 
+  if (filteredPerson.size() > 0) {
+      persons.remove(filteredPerson.getFirst());
+      persons.add(person);
+      return true;
+  }
+  return false;
+}
 
 }
