@@ -52,6 +52,21 @@
       </div>
       <div class="alert alert-danger" th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"></div>
 
+      
+      <div class="mb-3">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input type="number" name="phoneNumber" th:field="*{phoneNumber}" class="form-control" placeholder="Enter your Phone Number...">
+      </div>
+      <div class="alert alert-danger" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></div>
+
+      
+      <div class="mb-3">
+        <label for="postalCode" class="form-label">Postal Code</label>
+        <input type="number" name="postalCode" th:field="*{postalCode}" class="form-control" placeholder="Enter your Postal Code...">
+      </div>
+      <div class="alert alert-danger" th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}"></div>
+
+
 
 
       <button type="submit" class="btn btn-primary">Submit</button>

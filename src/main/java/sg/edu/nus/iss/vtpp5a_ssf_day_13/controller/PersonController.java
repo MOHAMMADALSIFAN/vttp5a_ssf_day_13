@@ -49,7 +49,7 @@ public String createPerson(@Valid @ModelAttribute("persons") Person person,  Bin
         return "createperson";  // Show the form again with validation errors
     }
     // Save the person or perform other actions
-    Person p = new Person(person.getFirstName(),person.getLastName(),person.getSalary(),person.getEmail(),person.getDateOfBirth());
+    Person p = new Person(person.getFirstName(),person.getLastName(),person.getSalary(),person.getEmail(),person.getDateOfBirth(),person.getPhoneNumber(),person.getPostalCode());
     personService.create(p);
     return "redirect:/persons";  // Redirect after successful creation
 }
