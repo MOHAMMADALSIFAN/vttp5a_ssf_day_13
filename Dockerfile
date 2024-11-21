@@ -41,4 +41,4 @@ CMD ["--server.port=${SERVER_PORT}"]
 #2.) docker build -t cihansifan/vttp5-ssf-day_13:v0.0.1 .
 #3.) docker image ls (to check is it upload in local)
 #4.) docker container ls 
-#5.) 
+#5.) docker run -p 8085:3000 cihansifan/vttp5-ssf-day_13:v0.0.1
